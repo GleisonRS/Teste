@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+        }
+        nav{
+            position: relative;
+            font-family: monospace;
+            float: left;
+            width: 100%;
+        }
+        .menu ul{
+            list-style: none;
+            padding: 0;
+        }
+        .menu li{   
+            background-color: rgb(3, 3, 49);
+            display: block;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            text-decoration: none;
+            transition-duration: 0.5s;
+        }
+        .menu li a{
+            color: rgb(7, 232, 248);
+            text-decoration: none;
+        }
+
+        .menu li ul{
+            visibility: hidden;
+            opacity: 0;
+            min-height: 5rem;   
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+            box-shadow: 0px 8px 16px 0px rgba(rgb(207, 219, 207), green, blue, alpha);
+        }
+
+        .menu li ul li{
+            clear: both;
+            width: 100%;
+        }
+
+        .menu ul li:hover,
+        .menu ul li:focus-within{
+            background-color: rgb(161, 7, 7);
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .menu ul a{
+            color: rgb(198, 248, 16);
+        }
+
+        .menu ul li:hover>ul,
+        .menu ul li:focus-within>ul,
+        .menu ul li:hover,
+        .menu ul li:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre Mim</a>
+             <ul>
+                 <li><a href="#">Meus Projetos</a></li>
+                 <li><a href="#">Meus Hobbies</a></li>
+             </ul></li>
+             <li><a href="#">Meu Currículo </a></li>
+            <li><a href="#">Entre em contato</a></li> 
+            
+
+        </ul>
+    </nav>
+
+
+</body>
+</html>

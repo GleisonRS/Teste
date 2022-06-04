@@ -1,0 +1,37 @@
+.menu 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(11, 84, 97);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu 
+li {
+    float: left;
+}
+.menu 
+li 
+a{
+    display: block;
+    color: rgb(196, 235, 26);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: black;
+    background-color: antiquewhite;
+}
+article{
+    padding: 30px;
+    margin-top: 30px;
+    height: 1500px;
+}
+.active{
+    background-color: aqua;
+}
