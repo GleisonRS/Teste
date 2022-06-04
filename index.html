@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="menuDropd.css">
+    <title>Document</title>
+    <style>
+        .button {
+            border: none;
+            border-radius: 15px;
+            padding: 15px 25px;
+            outline: none;
+            background-color: blue;
+            color: azure;
+            font-size: 15px;
+            box-shadow: 0 6px rgb(192, 206, 204);
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: rgb(4, 4, 49);
+
+        }
+
+        .button:active {
+            background-color: blue;
+            box-shadow: 0 2px rgb(192, 206, 204);
+            transform: translateY(2px);
+        }
+    </style>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <nav id="navegacao-principal">
+        <ul id="menu-principal">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre Mim</a>
+                <ul class="dropdown">
+                    <li><a href="#meus-projetos">Meus Projetos</a></li>
+                    <li><a href="#meus-hobbies">Meus Hobbies</a></li>
+                </ul>
+            </li>
+            <li><a href="#meu-curriculo">Meu Currículo</a></li>
+            <li><a href="#contato">Entre em contato</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        &nbsp;
+        <h1>GLEISON REIS SOUSA</h1>
+
+
+        <p>
+            <img src="Foto2_2.jpg" alt="Foto de Gleison" style="border-radius:50%;" title="Gleison Reis Sousa">
+        </p>
+
+        <h2>Quem sou eu?</h2>
+
+        <p id="meus-hobbies">
+            Meu nome é Gleison, tenho 22 anos, moro na Lagoa do Tocantins que fica no interior do Tocantins na
+            região do
+            Jalapão. Em agosto de 2019 mudei para Palmas-To para servir a Marinha do Brasil, fiquei na marinha
+            por 1 ano e 6
+            meses. Depois que completei o período de serviço militar obrigatório na marinha, trabalhei em um
+            posto de gasolina em Palmas
+            por alguns meses, depois decidi volta para Lagoa do Tocantins.
+        </p>
+        <blockquote>“Investir em conhecimento sempre rende os melhores juros.” –<cite>Benjamin Franklin</cite>
+        </blockquote>
+
+        <h2>Meus Hobbies</h2>
+
+        <p id="meus-projetos">
+        <ul>
+            <li>Correr</li>
+            <li>Pedalar</li>
+            <li>Investimentos</li>
+            <li>Viajar</li>
+        </ul>
+        </p>
+
+        <h2>Meus Projetos</h2>
+        <p id="contato">Primeiramente terminar minha faculdade para conseguir um emprego estável. Focar em estudos sobre
+            Investimentos para conhecer melhor esse mundo dos investimento da bolsa de valores, em especial os fundos
+            imobiliários que geram renda passiva para que ao longo do tempo possar alcançar a liberdade financeira. </p>
+
+        <!--Primeira imagem responsiva-->
+        <img srcset="img/foto01red_03.jpeg 306w,
+                img/foto01otz_02.jpeg 480w,
+                img/foto01otz.jpeg 800w
+                img/foto01.jpeg 1920w" sizes="(max-width: 480px) 360px
+                (max-width: 800px) 480px
+                (max-width: 1280px) 800px,
+                1280px" src="img/foto01.jpeg 1920w" alt="Trabalho">
+
+
+        <!--Formulario-->
+        <form action="">
+
+            <ul>
+                <li>
+                    <label for="Nome">Nome:</label>
+                    <input type="text" id="nome" name="nomeUsuario" placeholder="nome">
+                </li>
+                <li>
+                    <label for="e-mail">E-mail:</label>
+                    <input type="text" id="e-mail" name="e-mailUsuario" placeholder="exemplo@gmail.com">
+                </li>
+                <li>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagemUsuario" id="mensagem" cols="30" rows="10"></textarea>
+                </li>
+            </ul>
+            <!--<input type="submit" value="Enviar">-->
+            <button class="button">Enviar Mensagem</button>
+        </form>
+
+
+            <!--segunda imagem responsiva-->
+            <img srcset="img/foto02red_03.jpeg 306w,
+                         img/foto02red_02.jpeg 480w,
+                         img/foto02otz.jpeg 800w
+                         img/foto02.jpeg 1920w" 
+                 sizes="(max-width: 480px) 360px
+                        (max-width: 800px) 480px
+                        (max-width: 1280px) 800px,
+                        1280px" 
+                 src="img/foto02.jpeg 1920w" 
+                 alt="linux">
+
+        <h2>Assuntos que estou estudando</h2>
+        <!--1. uma lista com 3 assuntos que vem estudando
+        2. cada assunto deverá possuir um link para algum site externo que deverá se mostrado em uma nova aba-->
+        <ul>
+            <li><a href="https://www.javaprogressivo.net/2012/08/laco-for-tendo-um-maior-controle-sobre.html"
+                    target="_blank" rel="noopener noreferrer">Laço de Repetição for - java </a></li>
+            <li><a href="https://www.devmedia.com.br/projeto-de-banco-de-dados-parte-1/10923" target="_blank"
+                    rel="noopener noreferrer">Projeto de Banco de Dado</a></li>
+            <li><a href="https://www.teclogica.com.br/ooa-object-oriented-analysis-analise-orientada-a-objetos/#:~:text=A%20An%C3%A1lise%20Orientada%20a%20Objetos,descritivo%20contendo%20informa%C3%A7%C3%B5es%20do%20projeto."
+                    target="_blank" rel="noopener noreferrer">Análise Orientada a Objeto</a></li>
+        </ul>
+
+        <h2>Assuntos que pretendo estudar</h2>
+        <!--1. lista de 3 assuntos q pretendo ser estudado
+       2. cada assunto deverá possuir um link para algum site externo que deverá ser aberto uma nova janela-->
+        <ul>
+            <li><a href="https://web.tecgraf.puc-rio.br/ftp_pub/lfm/CIV2802-ModelagemOrientadaObjetos.pdf"
+                    target="_blank" rel="noopener noreferrer">Modelagem OO com UML</a></li>
+            <li><a href="https://sites.google.com/site/fkbancodedados1/modelodados/der" target="_blank"
+                    rel="noopener noreferrer">Modelo Relacional - Diagrama Entidade Relacional ou DER</a></li>
+            <li><a href="https://www.devmedia.com.br/while-e-do-while-lacos-de-repeticoes-estrutura-da-linguagem-parte-1/18870"
+                    target="_blank" rel="noopener noreferrer">Laço de Repetição while e do-while - java</a> </li>
+        </ul>
+
+        <table border="" id="meu-curriculo">
+            <caption>Minha Grade Curricular</caption>
+            <thead>
+                <tr>
+                    <th>Materia</th>
+                    <th>Período</th>
+                    <th>Codígo da Disciplina</th>
+                    <th>Professor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="ASI.html"> Análise de Sistemas</a></td>
+                    <td>2º P</td>
+                    <td>ASI</td>
+                    <td>Dr. Gerson Pesente Focking</td>
+                </tr>
+                <tr>
+                    <td><a href="FPB.html">Fundamentos e Projetos de Bancos de Dados</a></td>
+                    <td>2º P</td>
+                    <td>FPB</td>
+                    <td>Esp. Leonardo Jose de Sales</td>
+                </tr>
+                <tr>
+                    <td><a href="IPG.html">Introdução à Programação</a></td>
+                    <td>2º P</td>
+                    <td>IPG</td>
+                    <td>Me. Helder Cleber Almeida Pereira</td>
+                </tr>
+                <tr>
+                    <td><a href="PEW.html">Programação Básica para Web</a></td>
+                    <td>2º P</td>
+                    <td>PEW</td>
+                    <td>Me. Mauro Henrique Lima de Boni</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </article>
+</body>
+
+</html>
