@@ -90,112 +90,119 @@
     </style>
     <style>
         /*Layout usando gride, flexbox e media query*/
-        *{
+        * {
             padding: 0;
             margin: 0;
-            font-family: 'Quicksand',sans-serif;
+            font-family: 'Quicksand', sans-serif;
             color: #000;
         }
 
-        .pagina{
+        .pagina {
             display: grid;
-            grid-template-areas: "h" "m" "c" "ca" "r";
+            grid-template-areas: "h""m""c""ca""r";
             row-gap: 1px;
         }
 
-        .cabecalho{
+        .cabecalho {
             grid-area: h;
-           /* background-color: aliceblue;*/
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           text-align: center;
+            /* background-color: aliceblue;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
-        .titulo{
+        .titulo {
             padding: 10px;
             text-shadow: 1px 1px 3px rgb(194, 200, 16);
         }
 
-        .logo{
+        .logo {
             width: 72px;
         }
 
-        .navegacao-principal{
+        .navegacao-principal {
             grid-area: m;
             background-color: rgb(8, 51, 208);
         }
 
-        #menu-principal{
+        #menu-principal {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
 
-        #menu-principal li{
+        #menu-principal li {
             list-style: none;
         }
 
-        #menu-principal li a{
+        #menu-principal li a {
             color: rgb(225, 228, 228);
             text-decoration: none;
         }
 
-        .conteudo{
+        .conteudo {
             background-color: rgb(235, 240, 240);
             color: #000;
             grid-area: c;
         }
 
-        .conteudo_extra{
+        .conteudo_extra {
             background-color: rgb(5, 65, 78);
             grid-area: ca;
         }
 
-        .rodape{
+        .rodape {
             background: rgb(29, 5, 133);
             grid-area: r;
         }
-        .rodape ul{
+
+        .rodape ul {
             text-align: center;
         }
 
-        @media screen and (min-width: 480px){
-            .pagina{
+        @media screen and (min-width: 480px) {
+            .pagina {
                 grid-template-areas: "h h"
-                                     "m m"
-                                     "c ca"
-                                     "r r";
+                    "m m"
+                    "c ca"
+                    "r r";
                 column-gap: 2px;
                 row-gap: 2px;
                 grid-template-columns: 2fr 1fr;
             }
 
-            .cabecalho{
+            .cabecalho {
                 flex-direction: row;
             }
 
-            .titulo{
+            .titulo {
                 width: 100%;
             }
         }
 
-        @media screen and (min-width:768px){
-            .pagina{
+        @media screen and (min-width: 720px) {
+            .pagina {
                 grid-template-areas: "h h h"
                                      "m c ca"
                                      "r r r";
                 grid-template-columns: 1fr 4rf 2rf;
                 row-gap: 3px;
                 column-gap: 3px;
-            }    
-            
-            #menu-principal{
+            }
+
+            #menu-principal {
                 flex-direction: column;
                 text-align: center;
             }
-        }
 
+
+            .navegacao-principal ul ul {
+                position: static;
+                max-height: 0;
+                transition: all 4s;
+            }
+        }
     </style>
 
 </head>
@@ -204,12 +211,12 @@
     <main class="pagina">
 
         <header class="cabecalho">
-            <p id="meus-hobbies" class="logo">
+            <p class="logo">
                 <img src="Foto2_2.jpg" alt="Foto de Gleison" style="border-radius:50%;" title="Gleison Reis Sousa">
             </p>
             </h1>
 
-            <h1 id="meus-projetos" class="titulo">GLEISON REIS SOUSA</h1>
+            <h1 class="titulo">GLEISON REIS SOUSA</h1>
 
         </header>
 
@@ -217,7 +224,7 @@
         <nav class="navegacao-principal">
             <ul id="menu-principal">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre Mim</a>
+                <li id="test"><a href="#">Sobre Mim</a>
                     <ul class="dropdown">
                         <li><a href="#meus-projetos">Meus Projetos</a></li>
                         <li><a href="#meus-hobbies">Meus Hobbies</a></li>
@@ -231,55 +238,55 @@
         &nbsp;
 
 
-        
-            &nbsp;
-            <article class="conteudo">
-                <article>
-                    <h2>Quem sou eu?</h2>
 
-                    <p>
-                        Meu nome é Gleison, tenho 22 anos, moro na Lagoa do Tocantins que fica no interior do Tocantins
-                        na
-                        região do
-                        Jalapão. Em agosto de 2019 mudei para Palmas-To para servir a Marinha do Brasil, fiquei na
-                        marinha
-                        por 1 ano e 6
-                        meses. Depois que completei o período de serviço militar obrigatório na marinha, trabalhei em um
-                        posto de gasolina em Palmas
-                        por alguns meses, depois decidi volta para Lagoa do Tocantins.
-                    </p>
-                    <blockquote>“Investir em conhecimento sempre rende os melhores juros.” –<cite>Benjamin
-                            Franklin</cite>
-                    </blockquote>
-                </article>
+        &nbsp;
+        <article class="conteudo">
+            <article>
+                <h2>Quem sou eu?</h2>
 
-                <article>
-                    <h2>Meus Hobbies</h2>
+                <p>
+                    Meu nome é Gleison, tenho 22 anos, moro na Lagoa do Tocantins que fica no interior do Tocantins
+                    na
+                    região do
+                    Jalapão. Em agosto de 2019 mudei para Palmas-To para servir a Marinha do Brasil, fiquei na
+                    marinha
+                    por 1 ano e 6
+                    meses. Depois que completei o período de serviço militar obrigatório na marinha, trabalhei em um
+                    posto de gasolina em Palmas
+                    por alguns meses, depois decidi volta para Lagoa do Tocantins.
+                </p>
+                <blockquote>“Investir em conhecimento sempre rende os melhores juros.” –<cite>Benjamin
+                        Franklin</cite>
+                </blockquote>
+            </article>
 
-                    <p>
-                    <ul>
-                        <li>Correr</li>
-                        <li>Pedalar</li>
-                        <li>Investimentos</li>
-                        <li>Viajar</li>
-                    </ul>
-                    </p>
-                </article>
+            <article>
+                <h2 id="meus-hobbies" >Meus Hobbies</h2>
 
-                <article>
-                    <h2>Meus Projetos</h2>
-                    <p>Primeiramente terminar minha faculdade para conseguir um emprego estável. Focar em estudos sobre
-                        Investimentos para conhecer melhor esse mundo dos investimento da bolsa de valores, em especial
-                        os
-                        fundos
-                        imobiliários que geram renda passiva para que ao longo do tempo possar alcançar a liberdade
-                        financeira. </p>
-                </article>
+                <p>
+                <ul>
+                    <li>Correr</li>
+                    <li>Pedalar</li>
+                    <li>Investimentos</li>
+                    <li>Viajar</li>
+                </ul>
+                </p>
+            </article>
+
+            <article>
+                <h2 id="meus-projetos">Meus Projetos</h2>
+                <p>Primeiramente terminar minha faculdade para conseguir um emprego estável. Focar em estudos sobre
+                    Investimentos para conhecer melhor esse mundo dos investimento da bolsa de valores, em especial
+                    os
+                    fundos
+                    imobiliários que geram renda passiva para que ao longo do tempo possar alcançar a liberdade
+                    financeira. </p>
+            </article>
 
 
-                <!--Primeira imagem responsiva-->
+            <!--Primeira imagem responsiva-->
 
-                <img srcset="img/ft360x203.jpg 360w,
+            <img srcset="img/ft360x203.jpg 360w,
                         img/ft480x270.jpg 480w,
                         img/ft800x450.jpg 800w,
                         img/ft1920x1080.jpeg 1920w" sizes="(max-width: 480px) 360px,
@@ -288,32 +295,32 @@
                            1280px" src="img/ft1920x1080.jpeg" alt="Trabalho!">
 
 
-                <!--Formulario-->
-                <article>
-                    <form action="" id="contato">
+            <!--Formulario-->
+            <article>
+                <form action="" id="contato">
 
-                        <ul>
-                            <li>
-                                <label for="Nome">Nome:</label>
-                                <input type="text" id="nome" name="nomeUsuario" placeholder="nome">
-                            </li>
-                            <li>
-                                <label for="e-mail">E-mail:</label>
-                                <input type="text" id="e-mail" name="e-mailUsuario" placeholder="exemplo@gmail.com">
-                            </li>
-                            <li>
-                                <label for="mensagem">Mensagem:</label>
-                                <textarea name="mensagemUsuario" id="mensagem" cols="30" rows="10"></textarea>
-                            </li>
-                        </ul>
-                        <!--<input type="submit" value="Enviar">-->
-                        <button class="button">Enviar Mensagem</button>
-                    </form>
-                </article>
+                    <ul>
+                        <li>
+                            <label for="Nome">Nome:</label>
+                            <input type="text" id="nome" name="nomeUsuario" placeholder="nome">
+                        </li>
+                        <li>
+                            <label for="e-mail">E-mail:</label>
+                            <input type="text" id="e-mail" name="e-mailUsuario" placeholder="exemplo@gmail.com">
+                        </li>
+                        <li>
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea name="mensagemUsuario" id="mensagem" cols="30" rows="10"></textarea>
+                        </li>
+                    </ul>
+                    <!--<input type="submit" value="Enviar">-->
+                    <button class="button">Enviar Mensagem</button>
+                </form>
+            </article>
 
-                <!--segunda imagem responsiva-->
+            <!--segunda imagem responsiva-->
 
-                <img srcset="img/ft02_360x203.jpg 360w,
+            <img srcset="img/ft02_360x203.jpg 360w,
                         img/ft02_480x270.jpg 480w,
                         img/ft02_800x450.jpg 800w,
                          img/ft02_1920x1080.jpeg 1920w" sizes="(max-width: 480px) 360px,
@@ -322,85 +329,88 @@
                            1280px" src="img/ft02_1920x1080.jpeg" alt="Sistemas">
 
 
-                <article>
-                    <h2>Assuntos que estou estudando</h2>
-                    <!--1. uma lista com 3 assuntos que vem estudando
+            <article>
+                <h2>Assuntos que estou estudando</h2>
+                <!--1. uma lista com 3 assuntos que vem estudando
                 2. cada assunto deverá possuir um link para algum site externo que deverá se mostrado em uma nova aba-->
-                    <ul>
-                        <li><a href="https://www.javaprogressivo.net/2012/08/laco-for-tendo-um-maior-controle-sobre.html"
-                                target="_blank" rel="noopener noreferrer">Laço de Repetição for - java </a></li>
-                        <li><a href="https://www.devmedia.com.br/projeto-de-banco-de-dados-parte-1/10923"
-                                target="_blank" rel="noopener noreferrer">Projeto de Banco de Dado</a></li>
-                        <li><a href="https://www.teclogica.com.br/ooa-object-oriented-analysis-analise-orientada-a-objetos/#:~:text=A%20An%C3%A1lise%20Orientada%20a%20Objetos,descritivo%20contendo%20informa%C3%A7%C3%B5es%20do%20projeto."
-                                target="_blank" rel="noopener noreferrer">Análise Orientada a Objeto</a></li>
-                    </ul>
-                </article>
-
-                <article>
-                    <h2>Assuntos que pretendo estudar</h2>
-                    <!--1. lista de 3 assuntos q pretendo ser estudado
-                2. cada assunto deverá possuir um link para algum site externo que deverá ser aberto uma nova janela-->
-                    <ul>
-                        <li><a href="https://web.tecgraf.puc-rio.br/ftp_pub/lfm/CIV2802-ModelagemOrientadaObjetos.pdf"
-                                target="_blank" rel="noopener noreferrer">Modelagem OO com UML</a></li>
-                        <li><a href="https://sites.google.com/site/fkbancodedados1/modelodados/der" target="_blank"
-                                rel="noopener noreferrer">Modelo Relacional - Diagrama Entidade Relacional ou DER</a>
-                        </li>
-                        <li><a href="https://www.devmedia.com.br/while-e-do-while-lacos-de-repeticoes-estrutura-da-linguagem-parte-1/18870"
-                                target="_blank" rel="noopener noreferrer">Laço de Repetição while e do-while - java</a>
-                        </li>
-                    </ul>
-                </article>
+                <ul>
+                    <li><a href="https://www.javaprogressivo.net/2012/08/laco-for-tendo-um-maior-controle-sobre.html"
+                            target="_blank" rel="noopener noreferrer">Laço de Repetição for - java </a></li>
+                    <li><a href="https://www.devmedia.com.br/projeto-de-banco-de-dados-parte-1/10923" target="_blank"
+                            rel="noopener noreferrer">Projeto de Banco de Dado</a></li>
+                    <li><a href="https://www.teclogica.com.br/ooa-object-oriented-analysis-analise-orientada-a-objetos/#:~:text=A%20An%C3%A1lise%20Orientada%20a%20Objetos,descritivo%20contendo%20informa%C3%A7%C3%B5es%20do%20projeto."
+                            target="_blank" rel="noopener noreferrer">Análise Orientada a Objeto</a></li>
+                </ul>
             </article>
 
-            <aside class="conteudo_extra">
-                <article>
-                    <table border="" id="meu-curriculo">
-                        <caption>Minha Grade Curricular</caption>
-                        <thead>
-                            <tr>
-                                <th>Materia</th>
-                                <th>Período</th>
-                                <th>Codígo da Disciplina</th>
-                                <th>Professor</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><a href="ASI.html"> Análise de Sistemas</a></td>
-                                <td>2º P</td>
-                                <td>ASI</td>
-                                <td>Dr. Gerson Pesente Focking</td>
-                            </tr>
-                            <tr>
-                                <td><a href="FPB.html">Fundamentos e Projetos de Bancos de Dados</a></td>
-                                <td>2º P</td>
-                                <td>FPB</td>
-                                <td>Esp. Leonardo Jose de Sales</td>
-                            </tr>
-                            <tr>
-                                <td><a href="IPG.html">Introdução à Programação</a></td>
-                                <td>2º P</td>
-                                <td>IPG</td>
-                                <td>Me. Helder Cleber Almeida Pereira</td>
-                            </tr>
-                            <tr>
-                                <td><a href="PEW.html">Programação Básica para Web</a></td>
-                                <td>2º P</td>
-                                <td>PEW</td>
-                                <td>Me. Mauro Henrique Lima de Boni</td>
-                            </tr>
-                        </tbody>
+            <article>
+                <h2>Assuntos que pretendo estudar</h2>
+                <!--1. lista de 3 assuntos q pretendo ser estudado
+                2. cada assunto deverá possuir um link para algum site externo que deverá ser aberto uma nova janela-->
+                <ul>
+                    <li><a href="https://web.tecgraf.puc-rio.br/ftp_pub/lfm/CIV2802-ModelagemOrientadaObjetos.pdf"
+                            target="_blank" rel="noopener noreferrer">Modelagem OO com UML</a></li>
+                    <li><a href="https://sites.google.com/site/fkbancodedados1/modelodados/der" target="_blank"
+                            rel="noopener noreferrer">Modelo Relacional - Diagrama Entidade Relacional ou DER</a>
+                    </li>
+                    <li><a href="https://www.devmedia.com.br/while-e-do-while-lacos-de-repeticoes-estrutura-da-linguagem-parte-1/18870"
+                            target="_blank" rel="noopener noreferrer">Laço de Repetição while e do-while - java</a>
+                    </li>
+                </ul>
+            </article>
+        </article>
 
-                    </table>
-                </article>
-            </aside>
-        
+        <aside class="conteudo_extra">
+            <article>
+                <table border="" id="meu-curriculo">
+                    <caption>Minha Grade Curricular</caption>
+                    <thead>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Período</th>
+                            <th>Codígo da Disciplina</th>
+                            <th>Professor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="ASI.html"> Análise de Sistemas</a></td>
+                            <td>2º P</td>
+                            <td>ASI</td>
+                            <td>Dr. Gerson Pesente Focking</td>
+                        </tr>
+                        <tr>
+                            <td><a href="FPB.html">Fundamentos e Projetos de Bancos de Dados</a></td>
+                            <td>2º P</td>
+                            <td>FPB</td>
+                            <td>Esp. Leonardo Jose de Sales</td>
+                        </tr>
+                        <tr>
+                            <td><a href="IPG.html">Introdução à Programação</a></td>
+                            <td>2º P</td>
+                            <td>IPG</td>
+                            <td>Me. Helder Cleber Almeida Pereira</td>
+                        </tr>
+                        <tr>
+                            <td><a href="PEW.html">Programação Básica para Web</a></td>
+                            <td>2º P</td>
+                            <td>PEW</td>
+                            <td>Me. Mauro Henrique Lima de Boni</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </article>
+        </aside>
+
         <footer class="rodape">
             <ul>
-                <li><a href="https://m.facebook.com/gleison.reissousa/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                <li><a href="https://contate.me/Gleisonreis/" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
-                <li><a href="https://br.linkedin.com/in/gleison-reis-sousa-3b1403203/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://m.facebook.com/gleison.reissousa/" target="_blank"
+                        rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://contate.me/Gleisonreis/" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </li>
+                <li><a href="https://br.linkedin.com/in/gleison-reis-sousa-3b1403203/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
         </footer>
     </main>
